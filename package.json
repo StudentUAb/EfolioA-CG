@@ -1,0 +1,11 @@
+{
+    "name": "my-http-server",
+    "version": "1.0.0",
+    "description": "HTTP server using http-server",
+    "scripts": {
+      "start": "http-server -p 8087"
+    },
+    "dependencies": {
+      "http-server": "^0.12.3"
+    }
+  }

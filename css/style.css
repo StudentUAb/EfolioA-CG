@@ -1,0 +1,62 @@
+/* style.css
+UC: 21020 - Computação Grafica
+Ano 2023/24 - EFOLIO A -  Implementação do algoritmo do ponto médio e  Interface Gráfico - UAb
+**
+** Aluno: 2100927 - Ivo Baptista 
+*/
+
+/* Estilos para o painel de pontos */
+body {            
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Define propriedades da área de canvas na página */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para o painel de instruções */
+#instructions {
+  position: absolute; /* Posiciona o painel de instruções */
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);  /* Fundo preto com alguma transparência */
+  color: white; /* Cor do texto */
+  border-radius: 5px; /* Adiciona arredondamento nas bordas */
+  width: 200px;  /* Ajusta a largura conforme necessário */
+  font-size: 12px;  /* Define um tamanho de fonte para que as instruções sejam legíveis */
+}
+
+/* Define estilos para o título do painel de instruções */
+#instructions h3 {
+  margin: 0; /* Remove margens padrão */
+  margin-bottom: 8px;  /* Espaçamento entre o título e as instruções */
+  font-size: 14px;  /* Tamanho da fonte para o título */
+}
+@keyframes blinker {
+  50% { opacity: 0; } /* Faz o texto "Ivo Baptista" piscar desaparecendo por 50% do tempo */
+}
+/* Define animation for blinking text */
+.blink {
+  color: rgb(0, 255, 247); /* Define a cor do texto piscante como azul claro */
+  animation: blinker 2s linear infinite; /* Aplica a animação blinker definida anteriormente, repetindo indefinidamente a cada 2 segundos */
+}
+
+/* Define a animation for spinning logo three.js */
+@keyframes spinY {
+  from {
+      transform: rotateY(0deg); /* Define o angulogo inicial como 0 graus */
+  }
+  to {
+      transform: rotateY(360deg); /* Define o angulo final como 360 graus para uma rotação completa */
+  }
+}
+
+/* Define animation for blinking and spinning text*/
+img.logo-spinY {
+  animation: spinY 5s linear infinite; /* Aplica a animação spinY definida anteriormente, repetindo indefinidamente a cada 5 segundos */
+} 

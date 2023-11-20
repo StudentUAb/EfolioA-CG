@@ -1,0 +1,7 @@
+version: '3'
+services:
+  http-server:
+    build:
+      context: .
+    ports:
+      - "8087:8087"

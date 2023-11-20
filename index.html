@@ -1,0 +1,40 @@
+<!--index.html
+
+UC: 21020 - Computação Grafica
+Ano 2023/24 - EFOLIO A -  Implementação do algoritmo do ponto médio e  Interface Gráfico - UAb
+**
+** Aluno: 2100927 - Ivo Baptista 
+-->
+
+
+<!DOCTYPE html>
+<!-- Creado por Ivo Baptista com ajuda do GPT e Google como Debugger e documentação da biblioteca Three.js-->
+<html lang="pt">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>EfolioA de Computação Gráfica</title>
+</head>
+<body>
+<!--  Definimos container para a cena three.js -->
+    <div id="scene-container"></div>
+    <!--  Criamos o container para as instruções -->
+    <div id="instructions">
+        <h3>Instruções:</h3>
+        <p>Pressionar <b>X</b> - Selecionar quadrado</p>
+        <p>Pressionar <b>Backspace</b> - Apagar objetos adicionados</p>
+        <p>Pressionar <b>C</b> - Reset da posição da câmera</p>
+        <p>_________________________________</p>
+        <p>Posição do Cursor: <span id="cursorPosition">x: 0, y: 0</span></p>
+        <p>Note que ao manter pressionado o X consegue desenhar linhas<b></b> de forma continua</p>
+        <p>21020 - Computação Gráfica - EfolioA</p>
+        <!--Nome com efeito a piscar --> 
+        <p class="blink">2100927 - Ivo Baptista</p>
+        <img src="./assets/threejs.png" alt="Logo" class="logo-spinY" style="width:100px; height:auto;">
+        <!-- Frase sobre a biblioteca three.js -->
+        <p>Este trabalho foi realizado com a biblioteca <a href="https://threejs.org/" target="_blank">three.js</a>.</p>
+    </div>      
+    <script type="module" src="./src/main.mjs"></script>
+</body>
+</html>
