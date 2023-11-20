@@ -22,7 +22,7 @@ let addedObjects = [];
 let isCameraAnimating = false;
 let cameraTargetPosition = new THREE.Vector3();
 let cameraStartPosition = new THREE.Vector3();
-let cameraMoveDuration = 2.5; // duração da animação em segundos
+let cameraMoveDuration = 1.5; // duração da animação em segundos
 let cameraMoveTime = 0; // Coloca o tempo inicial em 0
 const cameraNewPosition = new THREE.Vector3(0, 0, 10); // A posição da câmera para vista de cima
 
@@ -113,6 +113,13 @@ let selectedPoints = []; // Lista de pontos selecionados
 let lastHighlightedSquare = null; // Mantém registo do último quadrado destacado
 // let selectedSquare = null; // Mantém registo do quadrado selecionado
 
+
+
+    
+
+
+
+
 // Event listener para o movimento do rato
 window.addEventListener('mousemove', (event) => {
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; // Normaliza a posição do rato
@@ -138,16 +145,18 @@ window.addEventListener('mousemove', (event) => {
         }
     }
     
-    // Atualizar as coordenadas x e y no div de instruções
-    const normalizedX = (event.clientX / window.innerWidth) * 2 - 1; // Normaliza a posição do rato
-    const normalizedY = -(event.clientY / window.innerHeight) * 2 + 1; // Normaliza a posição do rato
-    const boardSize = 21; // Tamanho do seu tabuleiro
-    const boardX = Math.round(normalizedX * boardSize); // Arredonda a posição x
-    const boardY = Math.round(normalizedY * boardSize); // Arredonda a posição y
+//Atualizar as coordenadas x e y no div de instruções
+ const halfGridSize = 21; // Metade do tamanho da grelha para o mapeamento
+ const normalizedX = (event.clientX / window.innerWidth) * 2 - 1; // Normaliza a posição X do mouse
+ const normalizedY = -(event.clientY / window.innerHeight) * 2 + 1; // Normaliza a posição Y do mouse
+ const boardX = Math.round(normalizedX * halfGridSize);
+ const boardY = Math.round(normalizedY * halfGridSize)/2;
 
-    const cursorPositionElement = document.getElementById('cursorPosition'); // Elemento para mostrar as coordenadas
-    cursorPositionElement.textContent = `Pixel: X: ${event.clientX} Y: ${event.clientY} | Normalizadas: X: ${normalizedX.toFixed(2)} Y: ${normalizedY.toFixed(2)} | Tabuleiro: X: ${boardX} Y: ${boardY}`; // Atualiza o texto do elemento
+ const cursorPositionElement = document.getElementById('cursorPosition');
+ cursorPositionElement.textContent = `Pixel: X: ${event.clientX} Y: ${event.clientY} | Normalizadas: X: ${normalizedX.toFixed(2)} Y: ${normalizedY.toFixed(2)} | Tabuleiro: X: ${boardX} Y: ${boardY}`;
 });
+
+ 
 
 // Lista de quadrados selecionados
 let selectedSquares = new Set();
