@@ -19,6 +19,8 @@ Funcionamento de Three.js
 
 <pre>docker compose up -d </pre>
 
+Demo: http://server.ivo.com.pt:8080
+
 O projeto foi feito em Html, Javasript e Css
 
 
