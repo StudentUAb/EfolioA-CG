@@ -21,6 +21,8 @@ Funcionamento de Three.js
 
 Demo: http://server.ivo.com.pt:8080
 
+Video: https://youtu.be/Dbs-P95D0Q4
+
 O projeto foi feito em Html, Javasript e Css
 
 
